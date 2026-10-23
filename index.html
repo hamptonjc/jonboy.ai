@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10130f">
+  <meta name="description" content="Jonathan Hampton — artificial intelligence engineer. Selected projects in machine learning, computer vision, and simulation.">
+  <title>Jonathan Hampton · jonboy.ai</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="art.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="header">
+    <a class="brand" href="#" aria-label="Jonboy home">j<span class="brand-orbit">o</span>nboy<span class="brand-ai">.ai</span></a>
+    <nav aria-label="Main navigation"><a href="#about">About <span>01</span></a><a href="#resume">Résumé <span>02</span></a><a href="#work">Work <span>03</span></a></nav>
+    <a class="header-contact" href="https://www.linkedin.com/in/hamptonjc/" target="_blank" rel="noopener noreferrer">Let’s connect <span>↗</span></a>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-meta"><span>Jonathan Hampton</span><span>Artificial intelligence engineer</span></div>
+      <div class="hero-art" aria-hidden="true"><canvas id="field"></canvas><div class="art-vignette"></div></div>
+      <article id="about" class="hero-copy bio-card" aria-labelledby="hero-title">
+        <p class="eyebrow">01 / The human behind the work</p>
+        <h1 id="hero-title">Curiosity is<br>the starting point.</h1>
+        <p class="bio-text">I’m Jonathan, an AI engineer focused on developing intelligent systems that perceive, understand, and interact with the physical world.</p>
+        <p class="bio-text">My background spans computer vision, 3D perception, reinforcement learning, simulation, and high-performance edge AI. I’ve led the development of end-to-end ML systems—from synthetic data generation and distributed training to inference optimization and deployment on real-world platforms.</p>
+        <p class="bio-text">I’m particularly interested in world models, embodied intelligence, and learning-based autonomy, with a long-term focus on advancing general-purpose AI and its applications in robotics, scientific discovery, and human well-being.</p>
+        <div class="bio-links">
+          <a class="text-link" href="https://www.linkedin.com/in/hamptonjc/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="https://github.com/hamptonjc" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="mailto:jhampton37@gatech.edu">Email <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+      <div class="hero-bottom"><p>Exploring what’s possible.<br>Engineering what’s next.</p><a class="round-link" href="#work"><span>Explore the work</span><span class="circle">↘</span></a></div>
+      <div class="hero-foot"><span>Huntsville, Alabama <span class="location-cross">✳</span></span><span class="art-caption">Fig. 001 — Emergence</span><button id="motion" type="button" aria-pressed="false"><span class="motion-icon">Ⅱ</span> Pause motion</button></div>
+    </section>
+    <section id="resume" class="section resume collapsible-section" aria-labelledby="resume-summary">
+      <details class="section-disclosure">
+        <summary id="resume-summary"><span class="eyebrow">02 / Résumé</span><span class="disclosure-hint">Background</span><span class="disclosure-icon" aria-hidden="true">+</span></summary>
+        <div class="disclosure-content">
+      <div class="resume-actions"><button class="print-link" type="button" id="print">Print résumé ↗</button></div>
+      <div class="resume-layout">
+        <div class="resume-intro"><img class="resume-portrait" src="jonathan-hampton.jpg" alt="Jonathan Hampton in graduation regalia" width="460" height="460" loading="lazy" decoding="async"><h2 id="resume-title">The story<br>so far.</h2><p class="resume-note">From mathematical foundations to intelligent systems in the physical world.</p></div>
+        <div class="timeline">
+          <h3 class="timeline-label">Experience</h3>
+          <article>
+            <p class="eyebrow">January 2024 – Present</p>
+            <h4>AI Engineer</h4><p class="resume-org">Cahaba Federal Solutions</p><p class="small-muted">Huntsville, Alabama</p>
+            <ul>
+              <li>Lead AI engineer on the U.S. Army SMDC’s $15M Autonomous Aimpoint Selection and Tracking (A2ST) program, developing a system-agnostic edge AI platform for real-time autonomous perception and control.</li>
+              <li>Architected an end-to-end ML pipeline spanning Blender-based synthetic data generation, distributed PyTorch training with Ray and Kubernetes, and model compilation and optimization for GPU and edge accelerators.</li>
+              <li>Profiled training and inference workloads with PyTorch Profiler, NVIDIA Nsight, and TensorRT to identify compute and memory bottlenecks and optimize performance on deployment hardware.</li>
+              <li>Collaborated with hardware, optical, and systems engineers to integrate the platform into four fielded high-energy laser systems.</li>
+              <li>Prototyped 3D shape estimation, 6-DoF pose estimation, and differentiable-rendering-based pose refinement for electro-optical imagery.</li>
+            </ul>
+          </article>
+          <article>
+            <p class="eyebrow">May 2021 – January 2024</p>
+            <h4>Machine Learning Engineer</h4><p class="resume-org">Radiance Technologies</p><p class="small-muted">Huntsville, Alabama</p>
+            <ul>
+              <li>Developed real-time neural object detection and tracking models for the U.S. Army’s Affordable Laser Weapon Module (ALWM), outperforming traditional tracking algorithms across two successful field demonstrations.</li>
+              <li>Built and optimized a multithreaded C++ inference runtime; combined architecture design, structured pruning, quantization, and runtime optimization to achieve 1,000+ FPS for FPGA deployment.</li>
+              <li>Contributed to an ONNX-to-AMD/Xilinx Versal AI Engine compiler written in C++, implementing distributed Conv2D and ReLU kernels across FP32, FP16, and INT8.</li>
+              <li>Designed a modular OpenGL simulation platform used across three funded programs to generate synthetic imagery for neural network training and algorithm evaluation.</li>
+            </ul>
+          </article>
+          <h3 class="timeline-label education-label">Education</h3>
+          <article>
+            <p class="eyebrow">2021 – 2025</p>
+            <h4>M.S. in Computer Science</h4><p class="resume-org">Georgia Institute of Technology</p><p>Specialization: Machine Learning</p>
+            <p>GPA: 3.8 / 4.0</p>
+            <p class="course-label">Courses</p>
+            <ul class="course-list"><li>Artificial Intelligence for Robotics</li><li>Deep Learning</li><li>GPU Hardware &amp; Software</li><li>Graduate Algorithms</li><li>High Performance Computer Architecture</li><li>Machine Learning</li><li>Natural Language Processing</li><li>Operating Systems</li><li>Quantum Computing</li><li>Reinforcement Learning</li></ul>
+          </article>
+          <article>
+            <p class="eyebrow">2014 – 2020</p>
+            <h4>B.S. in Mathematics</h4><p class="resume-org">East Tennessee State University</p><p>Specialization: Computer Applied Mathematics</p>
+            <p class="course-label">Courses · Math</p>
+            <ul class="course-list"><li>Calculus I/II/III</li><li>Graph Theory</li><li>Numerical Linear Algebra</li><li>Abstract Algebra</li><li>Differential Equations</li><li>Mathematical Modeling</li><li>Mathematical Computing</li><li>Probability and Statistics</li><li>Mathematical Reasoning</li><li>Stochastic Modeling</li><li>Complex Variables</li></ul>
+            <p class="course-label">Courses · Biology / Chemistry</p>
+            <ul class="course-list"><li>Biology I/II/III</li><li>Chemistry I/II</li><li>Organic Chemistry I/II</li><li>Genetics</li><li>Cell Biology</li><li>Biochemistry of Macromolecules</li></ul>
+          </article>
+        </div>
+      </div>
+        </div>
+      </details>
+    </section>
+    <section id="work" class="section work collapsible-section" aria-labelledby="work-summary">
+      <details class="section-disclosure">
+        <summary id="work-summary"><span class="eyebrow">03 / Selected work</span><span class="disclosure-hint">Experiments into applications</span><span class="disclosure-icon" aria-hidden="true">+</span></summary>
+        <div class="disclosure-content">
+      <div class="section-intro"><h2 id="work-title">From an idea.<br>Into the world.</h2><p>Project articles exploring how machines perceive, learn, and model complex systems.</p></div>
+      <div class="projects">
+        <a class="project" href="projects/litworldmodels.html"><div class="project-art world-model-art" aria-hidden="true"><svg viewBox="0 0 600 370"><defs><pattern id="wmgrid" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" fill="none" stroke="#afc5a2" stroke-opacity=".08"/></pattern></defs><rect width="600" height="370" fill="url(#wmgrid)"/><g fill="#171c15" stroke="#92a880"><rect x="48" y="125" width="140" height="105" rx="3"/><rect x="230" y="125" width="140" height="105" rx="3"/><rect x="412" y="125" width="140" height="105" rx="3"/></g><g fill="none" stroke="#b8cda5"><path d="M188 177H225m-7-5 7 5-7 5M370 177H407m-7-5 7 5-7 5"/><path d="M482 230v40H118v-40" stroke-dasharray="4 6" opacity=".45"/></g><g fill="#dbe2d1" text-anchor="middle" font-family="Arial,sans-serif" font-size="20"><text x="118" y="168">Vision</text><text x="300" y="168">Memory</text><text x="482" y="168">Controller</text></g><g fill="#9da694" text-anchor="middle" font-family="monospace" font-size="10"><text x="118" y="199">VAE · z</text><text x="300" y="199">MDN-RNN · h</text><text x="482" y="199">CMA-ES · a</text><text x="300" y="98">LEARNING A COMPACT WORLD MODEL</text></g></svg><span class="art-label">01 / World models</span><span class="project-arrow">↗</span></div><div class="project-info"><div><h3>Lit World Models</h3><p>Reimplementing World Models in PyTorch Lightning.</p></div><span class="year">2022</span></div><span class="article-cta">Read article <span aria-hidden="true">↗</span></span><div class="tags"><span>PyTorch Lightning</span><span>World models</span><span>Reinforcement learning</span></div></a>
+        <a class="project" href="projects/reading-the-road.html"><div class="project-art road" aria-hidden="true"><svg viewBox="0 0 600 370"><defs><pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" fill="none" stroke="#afc5a2" stroke-opacity=".12"/></pattern><linearGradient id="roadFade" x2="0" y2="1"><stop stop-color="#bac9aa" stop-opacity=".05"/><stop offset="1" stop-color="#bac9aa" stop-opacity=".8"/></linearGradient></defs><rect width="600" height="370" fill="url(#grid)"/><path d="M100 370L284 100M500 370L316 100" stroke="#acb99d" stroke-width="2" fill="none"/><path d="M180 370L292 100M420 370L308 100" stroke="#ccddba" stroke-width="2" stroke-dasharray="14 18" fill="none"/><path d="M100 370L284 100H316L500 370Z" fill="url(#roadFade)" opacity=".12"/><path d="M256 160H344V225H256Z" stroke="#c5d6af" stroke-width="1" fill="none"/><path d="M244 148h12m-12 0v12m112-12h-12m12 0v12m-112 77h12m-12 0v-12m112 12h-12m12 0v-12" stroke="#c5d6af" fill="none"/><circle cx="300" cy="192" r="3" fill="#c5d6af"/><path d="M0 282H600" stroke="#a7b49a" opacity=".18"/></svg><span class="art-label">02 / Computer vision</span><span class="project-arrow">↗</span></div><div class="project-info"><div><h3>Reading The Road</h3><p>Lane detection with C++ and OpenCV.</p></div><span class="year">2020</span></div><span class="article-cta">Read article <span aria-hidden="true">↗</span></span><div class="tags"><span>C++</span><span>OpenCV</span><span>Computer vision</span></div></a>
+      </div>
+        </div>
+      </details>
+    </section>
+    <section class="contact section" aria-labelledby="contact-title"><p class="eyebrow"><i class="status-dot"></i> Start a conversation</p><div class="contact-row"><h2 id="contact-title">What’s next<span>?</span></h2><a href="https://www.linkedin.com/in/hamptonjc/" target="_blank" rel="noopener noreferrer" class="contact-arrow" aria-label="Connect with Jonathan on LinkedIn">↗</a></div><div class="contact-bottom"><p>Ideas, interesting problems, new perspectives.<br>Let’s connect.</p><div class="contact-links"><a class="text-link" href="https://www.linkedin.com/in/hamptonjc/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/hamptonjc" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><a class="text-link" href="mailto:jhampton37@gatech.edu">Email <span aria-hidden="true">↗</span></a></div></div></section>
+  </main>
+  <footer><a class="brand" href="#">jonboy<span class="brand-ai">.ai</span></a><span>© <span id="year">2026</span> Jonathan Hampton</span><a href="#">Back to the beginning ↑</a></footer>
+</body>
+</html>
