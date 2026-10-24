@@ -15,8 +15,9 @@
   };
   function draw() {
     ctx.clearRect(0, 0, width, height);
-    const scale = Math.min(width / 1120, height / 750);
-    ctx.save();ctx.translate(width * .58 + pointer * 10, height * .44);ctx.scale(scale, scale);
+    const mobile = window.matchMedia('(max-width: 760px)').matches;
+    const scale = Math.min(width / (mobile ? 600 : 1120), height / 750);
+    ctx.save();ctx.translate(width * (mobile ? .5 : .58) + pointer * 10, height * .44);ctx.scale(scale, scale);
     // Nested, folded curves: an original generative study of emergence.
     for (let i = 0; i < 112; i++) {
       const layer = i / 111, radius = 48 + layer * 355;
