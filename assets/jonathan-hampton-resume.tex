@@ -1,0 +1,315 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot,
+    top=0.85 cm,
+    bottom=0.85 cm,
+    left=1.5 cm,
+    right=1.5 cm,
+    footskip=1.0 cm
+]{geometry}
+\usepackage[explicit]{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 0, 0}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={Jonathan Hampton's Resume},
+    pdfauthor={Jonathan Hampton},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+\usepackage{fontawesome5}
+
+% Ensure PDF is machine readable / ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\IfFileExists{sourcesanspro.sty}{\usepackage[default,type1]{sourcesanspro}}{%
+    \usepackage[scaled=0.95]{helvet}
+    \renewcommand{\familydefault}{\sfdefault}
+}
+
+% Settings:
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0.15cm}
+
+\makeatletter
+\let\ps@customFooterStyle\ps@plain
+\makeatother
+
+\titleformat{\section}{
+    \needspace{4\baselineskip}
+    \Large\color{primaryColor}
+}{
+}{
+}{
+    \textbf{#1}\hspace{0.15cm}\titlerule[0.8pt]\hspace{-0.1cm}
+}[]
+
+\titlespacing{\section}{
+    -1pt
+}{
+    0.12 cm
+}{
+    0.08 cm
+}
+
+\newenvironment{highlights}{
+    \small\linespread{0.96}\selectfont
+    \begin{itemize}[
+        topsep=0.04 cm,
+        parsep=0.02 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0.2 cm + 0.00001 cm
+    }{
+        0.2 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+}
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{threecolentry}[3][]{
+    \onecolentry
+    \def\thirdColumn{#3}
+    \setcolumnwidth{1 cm, \fill, 4.5 cm}
+    \begin{paracol}{3}
+    {\raggedright #2} \switchcolumn
+}{
+    \switchcolumn \raggedleft \thirdColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}
+    \par\kern\topsep
+    \centering
+    \color{primaryColor}
+    \linespread{1.5}
+}{
+    \par\kern\topsep
+}
+
+\newcommand{\placelastupdatedtext}{
+  \AddToShipoutPictureFG*{
+    \put(
+        \LenToUnit{\paperwidth-2 cm-0.2 cm+0.05cm},
+        \LenToUnit{\paperheight-1.0 cm}
+    ){
+        \vtop{
+            {\null}
+            \makebox[0pt][c]{
+                \small\color{gray}\textit{}\hspace{\widthof{}}
+            }
+        }
+    }
+  }
+}
+
+\let\hrefWithoutArrow\href
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{#2}}
+
+\begin{document}
+
+    \placelastupdatedtext
+
+    \begin{header}
+        \fontsize{30 pt}{30 pt}
+        \textbf{Jonathan Hampton}
+
+        \vspace{0.15 cm}
+        \small
+        \mbox{\faMapMarker* \hspace{0.13cm} Huntsville, AL (USA)}
+        \kern 0.25 cm
+        \mbox{\hrefWithoutArrow{mailto:jhampton37@gatech.edu}{
+            \faEnvelope \hspace{0.13cm} jhampton37@gatech.edu}}
+        \kern 0.25 cm
+        \mbox{\hrefWithoutArrow{tel:+1-423-773-0859}{
+            \faPhone* \hspace{0.13cm} 423-773-0859}}
+        \kern 0.25 cm
+        \mbox{\hrefWithoutArrow{https://jonboy.ai}{\faGlobe \hspace{0.13cm} jonboy.ai}}
+        \kern 0.25 cm
+        \mbox{\hrefWithoutArrow{https://github.com/hamptonjc}{
+            \faGithub \hspace{0.13cm} hamptonjc}}
+
+    \end{header}
+
+    \vspace{0.3 cm - 0.3 cm}
+
+    \section{Experience}
+\begin{twocolentry}{Huntsville, AL\\Jan. '24 - Present}
+\textbf{AI Engineer}, Cahaba Federal Solutions
+\end{twocolentry}
+\begin{onecolentry}\begin{highlights}
+\item {\small Lead AI engineer on the U.S. Army's \$15M Autonomous Aimpoint Selection and Tracking (A2ST) program, developing a system-agnostic edge AI platform for real-time autonomous perception and control.}
+\item {\small Architect end-to-end ML pipelines spanning Blender-based synthetic data generation, multi-node distributed PyTorch training, and model optimization for server and edge accelerators.}
+\item {\small Profile training and inference workloads using PyTorch Profiler and NVIDIA Nsight to identify compute/memory bottlenecks, optimizing performance across training and deployment hardware.}
+\item {\small Prototype novel AI capabilities for electro-optical and infrared (EO/IR) imagery, including real-time 3D shape estimation, 6-DoF differentiable rendering--based pose estimation, and sim-to-real fidelity enhancement using vision-language-action world models.}
+\item {\small Served as primary developer of a C++ ONNX-to-Versal AI Engine compiler for AMD/Xilinx hardware, implementing distributed Conv2D and ReLU kernels across FP32, FP16, and INT8.}
+\item {\small Collaborate with hardware, optical, and systems engineers to integrate the A2ST platform into several fielded systems.}
+\end{highlights}\end{onecolentry}
+\vspace{0.3 cm}
+\begin{twocolentry}{Huntsville, AL\\May '21 - Jan. '24}
+\textbf{Machine Learning Engineer}, Radiance Technologies
+\end{twocolentry}
+\begin{onecolentry}\begin{highlights}
+\item {\small Developed real-time neural object detection and tracking models for the U.S. Army's Affordable Laser Weapon Module (ALWM), outperforming traditional tracking algorithms across two successful field demonstrations.}
+\item {\small Built and optimized a multithreaded C++ neural network inference runtime; combined architecture design, structured pruning, quantization, and runtime optimization to achieve 1,000+ FPS for FPGA deployment.}
+\item {\small Designed a modular OpenGL simulation platform used across three funded programs to generate synthetic imagery for neural network training and algorithm evaluation.}
+\item {\small Built and maintained a five-node on-premises compute cluster for distributed neural network training using Docker, Kubernetes, and Ray.}
+\end{highlights}\end{onecolentry}
+
+    \section{Technical Skills}
+\begin{samepage}
+\begin{onecolentry}
+\begin{minipage}[t]{0.48\linewidth}\small\linespread{0.96}\selectfont\raggedright
+\textbf{Languages:} Python, C++, CUDA\par
+\vspace{0.1 cm}
+\textbf{Training \& Deployment:} PyTorch, Lightning, Ray, ONNX, HuggingFace, Hydra, TensorRT, OpenVINO, Vitis\par
+\vspace{0.1 cm}
+\textbf{Optimization:} PyTorch-Profiler, ModelOpt, Nsight, Triton\par
+\vspace{0.1 cm}
+\textbf{Data \& Visualization:} H5py, Pandas, CVAT, Plotly/Dash, Matplotlib\par
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.48\linewidth}\small\linespread{0.96}\selectfont\raggedright
+\textbf{Vision \& Graphics:} OpenCV, TorchVision, PyTorch3D, Blender, NVDiffRast, OpenGL, PIL, Scikit-Image\par
+\vspace{0.1 cm}
+\textbf{Reinforcement Learning:} Gymnasium, TorchRL, RLlib, Isaac-Lab\par
+\vspace{0.1 cm}
+\textbf{Systems:} Git, Docker, Kubernetes, CMake, Jenkins, Linux, MLFlow\par
+\vspace{0.1 cm}
+\textbf{Misc:} Azure/AWS/GCP, Protobuf, QEMU, Vivado, Yocto, VSCode\par
+\end{minipage}%
+\end{onecolentry}
+\end{samepage}
+
+    \section{Education}
+
+        \begin{threecolentry}{\textbf{MS}}{
+            2021 - 2025
+        }
+            \textbf{Computer Science}, Georgia Institute of Technology
+            \begin{highlights}
+                \item {\small Specialization: Machine Learning, 3.8/4.0 GPA}
+            \end{highlights}
+        \end{threecolentry}
+
+        \vspace{0.3 cm}
+
+        \begin{threecolentry}{\textbf{BS}}{
+            2014 - 2020
+        }
+            \textbf{Mathematics}, East Tennessee State University
+            \begin{highlights}
+                \item {\small Specialization: Computer Applied Mathematics}
+            \end{highlights}
+
+            \vspace{0 cm}
+        \end{threecolentry}
+
+    \section{Selected Projects}
+
+        \textbf{LitDreamerV3 (2023, 2026)}
+        \begin{highlights}
+            \item {\small Reimplemented Google DeepMind’s DreamerV3 world-model reinforcement-learning algorithm from PyTorch primitives,
+including the learned latent dynamics model, actor-critic learning, replay, and latent imagination across multiple control
+domains.}
+        \end{highlights}
+
+        \vspace{0.3 cm}
+
+        \textbf{LitWorldModels (2022)}
+        \begin{highlights}
+            \item {\small Reimplemented World Models in PyTorch Lightning, combining a variational autoencoder for visual compression, an MDN-RNN for probabilistic latent dynamics, and a CMA-ES controller for CarRacing. Structured data collection, model training, and controller optimization as separate stages.}
+        \end{highlights}
+
+    \section{Selected Publications}
+
+        \begin{samepage}
+
+            \begin{twocolentry}{
+                Oct. 2023
+            }
+                \textbf{\small Exploring Interplay between Simulations and Generative AI through Case Studies}
+
+                \mbox{\small AlaSim Modeling and Simulation Conference}
+
+                \mbox{\small Jonathan Hampton}, \mbox{\small Blake Anderton Ph.D.}
+
+                \begin{highlights}
+                    \item {\small Implemented and evaluated generative-modeling approaches including a learned world model for sensor-control agent training
+and ReCycleGAN for temporally consistent simulation-to-real style transfer.}
+                \end{highlights}
+
+                \vspace{0.05 cm}
+            \end{twocolentry}
+
+            \begin{twocolentry}{
+                Apr. 2024
+            }
+                \textbf{\small Tracking Enhancements from AI Methodologies Demonstrated on ALWM}
+
+                \mbox{\small National Fire Control Symposium}
+
+                \mbox{\small Blake Anderton Ph.D.}, \mbox{\small Jonathan Hampton}
+                \vspace{0.05 cm}
+            \end{twocolentry}
+
+        \end{samepage}
+
+\end{document}

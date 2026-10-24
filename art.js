@@ -71,7 +71,6 @@
     resumeDisclosure.open = true;
   });
   window.addEventListener('afterprint', () => { resumeDisclosure.open = resumeOpenBeforePrint; });
-  document.getElementById('print').addEventListener('click', () => window.print());
   document.getElementById('year').textContent = new Date().getFullYear();
   resize();sync();
 })();
