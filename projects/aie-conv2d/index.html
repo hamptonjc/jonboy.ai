@@ -5,6 +5,24 @@
 <title>Custom Core — Implementing CNNs on Spatial Compute · Jonathan Hampton</title>
 <meta name="description" content="My ONNX2Versal work on AIE-ML V1: memory constraints, early convolution experiments, and a parameterizable distributed Conv2D architecture for the Versal VE2802.">
 <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../style.css">
+
+<link rel="canonical" href="https://jonboy.ai/projects/aie-conv2d/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="jonboy.ai">
+<meta property="og:title" content="Custom Core — Implementing CNNs on Spatial Compute">
+<meta property="og:description" content="Distributing Conv2D across the Versal AI Engine array: memory management, dataflow, and the path toward ONNX2Versal.">
+<meta property="og:url" content="https://jonboy.ai/projects/aie-conv2d/">
+<meta property="og:image" content="https://jonboy.ai/projects/aie-conv2d/assets/project-cover.png">
+<meta property="og:image:secure_url" content="https://jonboy.ai/projects/aie-conv2d/assets/project-cover.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Shared input and output buffers connected through four distributed convolution branches.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Custom Core — Implementing CNNs on Spatial Compute">
+<meta name="twitter:description" content="Distributing Conv2D across the Versal AI Engine array: memory management, dataflow, and the path toward ONNX2Versal.">
+<meta name="twitter:image" content="https://jonboy.ai/projects/aie-conv2d/assets/project-cover.png">
+<meta name="twitter:image:alt" content="Shared input and output buffers connected through four distributed convolution branches.">
 </head>
 <body class="article-page video-article aie-article"><a class="skip" href="#article">Skip to article</a>
 <header class="header"><a class="brand" href="../../index.html" aria-label="Jonboy home">jonboy<span class="brand-ai">.ai</span></a><nav aria-label="Main navigation"><a href="../../index.html#about">About <span>01</span></a><a href="../../index.html#resume">Résumé <span>02</span></a><a href="../../index.html#work">Work <span>03</span></a></nav><a class="header-contact" href="mailto:jhampton37@gatech.edu">Let’s connect <span><svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20 20 4M4 4h16v16"/></svg></span></a></header>
